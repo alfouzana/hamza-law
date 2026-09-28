@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #b8904a;
+  --color-brand-dark: #9a7535;
+  --color-ink: #0f1f3a;
+  --color-ink-soft: #1a2d4f;
+  --font-sans: "IBM Plex Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 80px; }
