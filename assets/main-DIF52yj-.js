@@ -1,0 +1,7 @@
+(function(){const r=document.createElement("link").relList;if(r&&r.supports&&r.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))i(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const c of t.addedNodes)c.tagName==="LINK"&&c.rel==="modulepreload"&&i(c)}).observe(document,{childList:!0,subtree:!0});function o(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function i(e){if(e.ep)return;e.ep=!0;const t=o(e);fetch(e.href,t)}})();const d="966502372866",a=document.querySelector("[data-nav-toggle]"),s=document.querySelector("[data-mobile-menu]");a?.addEventListener("click",()=>s?.classList.toggle("hidden"));s?.querySelectorAll("a").forEach(n=>n.addEventListener("click",()=>s.classList.add("hidden")));const l=document.querySelector("[data-consult-form]");l?.addEventListener("submit",n=>{n.preventDefault();const r=new FormData(l),o=`السلام عليكم أستاذ حمزة،
+أرغب في طلب استشارة قانونية.
+
+الاسم: ${r.get("name")}
+الجوال: ${r.get("phone")}
+نوع القضية: ${r.get("type")}
+التفاصيل: ${r.get("details")||"-"}`;window.open(`https://wa.me/${d}?text=${encodeURIComponent(o)}`,"_blank")});document.querySelectorAll("[data-year]").forEach(n=>n.textContent=String(new Date().getFullYear()));
